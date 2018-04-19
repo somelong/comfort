@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动热点</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/activeCSS/activity.css">
+    <link rel="stylesheet" href="../css/nav/nav.css">
+    <link rel="stylesheet" href="../css/nav/footer.css">
+    <link rel="stylesheet" href="../css/nav/fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/loader.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<!--头部-->
+<%-include("common/header.ejs")%>
+
+<div class="container mainContainer">
+    <div class="row text-center margin-top-30">
+        <div class="col-md-12">
+            <!--<h1>COMFORT</h1>-->
+            <div class="row">
+                <img class="activityLogo" src=".././public/images/nav/logoB.png" alt="">
+            </div>
+            <div class="row margin-top-30">
+                <h2>与Comfort热点同步 理想生活，灵感一触即发</h2>
+            </div>
+        </div>
+    </div>
+    <!--nav-->
+    <div class="row text-center">
+        <div class="col-md-offset-2 col-md-8 ">
+            <div class="navbar-header" id="nav">
+                <a class="navbar-brand" href="/activity.do">空间灵感</a>
+                <a class="navbar-brand" href="activePing.html">精选晒单</a>
+                <a class="navbar-brand" style="background: #000; color: #fff;" href="/activityphps.do">实体店</a>
+                <a class="navbar-brand" href="/activityspecial.do">专辑</a>
+                <a class="navbar-brand" href="/activitytrademark.do">品牌</a>
+            </div>
+        </div>
+    </div>
+
+    <!--content1-->
+    <div class="row text-center content1">
+        <% var num=1 %>   <!--用于循环单数执行还是双数执行-->
+        <%for(var i=0;i<hphsData.length;i+=2){
+            num++;%>
+            <%if((num%2)==0){%>
+            <a href="#">
+                <div class="col-md-6 col-sm-6 col-xs-12 img-left text-left content3-left">
+                    <!--<img src="../public/images/p" class="img-responsive" alt="">-->
+                    <img src="<%=hphsData[i].ps_img%>" class="img-responsive" alt="">
+                    <div class="zhe"></div>
+                    <div class=" col-lg-12">
+                        <h4><%=hphsData[i].ps_zt%></h4>
+                        <p><%=hphsData[i].ps_ft%></p>
+                        <!--<div class="col-md-3 text-type"><p class="btn-info text-center"><%=hphsData[i].ac_type%></p></div>-->
+                    </div>
+                </div>
+            </a>
+            <%} else if((num%2)==1){%>
+            <a href="#">
+                <div class="col-md-6 col-sm-6 col-xs-12 img-left text-left content3-left">
+                    <!--<img src="../public/images/p" class="img-responsive" alt="">-->
+                    <img src="<%=hphsData[i].ps_img%>" class="img-responsive" alt="">
+                    <div class="zhe"></div>
+                    <div class=" col-lg-12">
+                        <h4><%=hphsData[i].ps_zt%></h4>
+                        <p><%=hphsData[i].ps_ft%></p>
+                        <!--<div class="col-md-3 text-type"><p class="btn-info text-center"><%=hphsData[i].ps_type%></p></div>-->
+                    </div>
+                </div>
+            </a>
+            <%}%>
+
+        <%}%>
+    </div>
+    <!--序列号-->
+    <!--<div class="row numDiv">-->
+        <!--<div class="col-md-offset-4 col-md-4 btn-num">-->
+            <!--<div class="num">1</div>-->
+            <!--<div class="num">1</div>-->
+            <!--<div class="num">2</div>-->
+            <!--<div class="num">3</div>-->
+            <!--<div class="num">4</div>-->
+            <!--<div class="num">更多</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
+<!--尾部-->
+<%-include("common/footer.ejs")%>
+<script src="../js/jquery-3.2.1.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="../js/nav/nav1.js"></script>
+<script>
+    $(".content3-left").addClass("animated fadeInLeft");
+    $(".content3-right").addClass("animated fadeInRight");
+    $(window).scroll(function () {
+        console.log($(window).scrollTop());
+        if($(window).scrollTop()>=50){
+            $(".content3-11").addClass("animated fadeInLeft");
+            $(".content3-12").addClass("animated fadeInRight");
+        }
+        if($(window).scrollTop()>=400){
+            $(".content3-21").addClass("animated fadeInLeft");
+            $(".content3-22").addClass("animated fadeInRight");
+        }
+        if($(window).scrollTop()>=1000){
+            $(".content3-31").addClass("animated fadeInLeft");
+            $(".content3-32").addClass("animated fadeInRight");
+        }
+    });
+</script>
+</body>
+</html>

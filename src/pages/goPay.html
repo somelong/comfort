@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/person/goPay.css"/>
+    <link rel="stylesheet" href="../css/person/CommonList.css">
+    <!--<link rel="stylesheet" href="../fonts/iconfont.css"/>-->
+    <link rel="stylesheet" href="../css/nav/nav.css">
+    <link rel="stylesheet" href="../css/nav/footer.css">
+    <link rel="stylesheet" href="../css/nav/fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <title>去支付</title>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+@@include("header.html")
+<header></header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="head">
+                            <span>就差一步，让comfort进入您的理想生活</span>
+                            <span class="text-gray">订单确认<i class="glyphicon glyphicon-menu-right text-gray" aria-hidden="true"></i></span>
+                            <span>订单支付</span>
+                        </div>
+                        <p class="text1 text-gray">comfort与您终于见面</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-xs-12">
+                        <span class="text2">支付方式</span>
+                        <span class="linear1"></span>
+                        <div class="choice1">
+                            <input type="checkbox" class="mycheckbox" id="test"/>
+                            支付宝
+                            <img src="../images/person-member/zhifubao.png" alt="">
+                        </div>
+                        <div class="choice1">
+                            <input type="checkbox" class="mycheckbox" id="test1"/>
+                            微信支付
+                            <img src="../images/person-member/weixin.png" alt="">
+                        </div>
+                        <div class="choice1">
+                            <input type="checkbox" class="mycheckbox" id="test2"/>
+                            银联快捷支付
+                            <img src="../images/person-member/yinlian.png" alt="">
+                        </div>
+                        <div class="choice1">
+                            <input type="checkbox" class="mycheckbox" id="test3"/>
+                            银联<span class="text-red">信用卡</span>分期支付
+                            <img src="../images/person-member/xinyongka.png" alt="">
+                            <img src="../images/person-member/new.png" alt="">
+                        </div>
+                        <br>
+                        <span class="text2">支付</span>
+                        <span class="linear1"></span>
+                        <h2 id="mytest">¥699</h2>
+                        <button id="confirmPay">确认支付</button>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <span class="text2">订单信息</span>
+                        <span class="linear2"></span>
+                        <br>
+                        <br>
+                        <div id="shopHtml">
+                            <div class="goodsText">
+                                <img src="" alt="">
+                                <span class="text-gray">丝绸椅™</span>
+                                <span class="text-gray">1件</span>
+                                <span class="text-gray">¥699</span>
+                            </div>
+                        </div>
+
+
+                        <br>
+                        <span class="text2">收货地址</span>
+                        <span class="linear2"></span>
+                        <br>
+                        <br>
+                        <p class="text-gray" id="mytest1">苟富贵， ／  15892238161 ／ 广东 东莞 万江区  一套房插入看要出风口，一幅图，</p>
+                        <span class="text2">发票信息</span>
+                        <span class="linear2" ></span>
+                        <br>
+                        <br>
+                        <p class="text-gray" id="mytest2">不开发票</p>
+                        <span class="text2">备注信息</span>
+                        <span class="linear2"></span>
+                        <br>
+                        <br>
+                        <p class="text-gray" id="mytest3">无</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer></footer>
+@@include("footer.html")
+<script src="../js/jquery-3.2.1.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<!--<script src="../js/person/Payconfirm.js"></script>-->
+<script src="../js/person/goPay.js"></script>
+<script src="../js/nav/nav1.js"></script>
+</body>
+</html>

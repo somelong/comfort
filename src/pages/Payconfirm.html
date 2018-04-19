@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/person/Payconfirm.css"/>
+    <link rel="stylesheet" href="../css/person/CommonList.css">
+    <!--<link rel="stylesheet" href="../fonts/iconfont.css"/>-->
+    <link rel="stylesheet" href="../css/nav/nav.css">
+    <link rel="stylesheet" href="../css/nav/footer.css">
+    <link rel="stylesheet" href="../css/nav/fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <title>订单结算</title>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="modal fade bs-example-modal-sm" id="mymodal" role="dialog">
+    <div class="modal-dialog modal-lg" id="modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" id="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h3>添加收货地址</h3>
+                <p id="neirong">以下均为必填项，请认真填写，避免收货时发生意外</p>
+            </div>
+            <div class="modal-body">
+                <div class="address-pop layer_pageContent" id="edit_address_pop" style="display: block;">
+                    <input id="modifying_address" type="hidden" value="">
+                    <div class="form-box">
+                        <select id="s_province"></select>
+                        <select id="s_city"><option value="">市</option></select>
+                        <select id="s_county"><option value="">区/县</option></select>
+                    </div>
+                    <div class="form-box">
+                        <input type="text"  id="address_text" class="address-input" placeholder="详细地址">
+                    </div>
+                    <h4 id="second">添加收货人信息</h4>
+                    <div class="form-box">
+                        <input type="text" id="receipt_name"  placeholder="收货人姓名">
+                        <input type="text" id="receipt_phone"  placeholder="收货人手机号码">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="button" value="提交" class="btn btn-success" id="btn-success"/>
+                <input type="button" value="关闭" class="btn btn-primary"  data-dismiss="modal"/>
+            </div>
+        </div>
+    </div>
+</div>
+@@include("header.html")
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-12">
+                <div class="row">
+                    <div class="head">
+                        <a href="Myorder1.html">
+                            <i class="glyphicon glyphicon-menu-left text-gray" aria-hidden="true"></i>
+                            查看我的订单
+                        </a>
+                        <span>订单确认<i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></span>
+                        <span class="text-gray">订单支付</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text1">
+                        <p class="text-gray"><span class="yuan">¥</span>已享受满¥2800减¥280，再买¥101可享受减¥300</p>
+                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4>单品</h4>
+                  <div id="shopHtml"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="mid-1">
+                <div class="mid-1-text">
+                    <br>
+                    <br>
+                    <br>
+                    <h2>我们在全国大部分城市免费配送请问我们要送到哪里？</h2>
+                    <br>
+                    <select class="address" id="address"></select>
+                    <i id="greenTrue">√</i>
+                    <span id="userName"></span>
+                    <span id="phone"></span>
+                    <span class="default">默认</span>
+                    <button  id="pageJump" data-toggle="modal" data-target="#mymodal">+添加收货地址</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-12">
+                <div class="mid-2">
+                    <h3>我们致力为您提供零时差的服务和售后</h3>
+                    <p class="text-gray">Confort已开通全国主要城市<b>免费配送</b>，并与国内专业家具物流方及售后服务公司合作，为你提供最好的配送及售后服务。</p>
+                    <p class="text-gray">具体服务标准如下：
+                        <br>
+                        1. 包含北上广深等全国166个城市、528个区县免费配送并上门安装；
+                        <br>
+                        2. 家居用品全国包邮。
+                    </p>
+                    <p class="text-gray">（备注：<b>新疆、西藏、青海</b>三个省份除外，其他省份内物流运输网点无法覆盖的远郊区县不在免费配送范围，请在购买产品时与造作确认）。</p>
+                    <p class="text-gray">家具产品单价较高，为避免您的损失，请您 <b>按造作收货流程收货</b>，详情请查看配送与售后说明。</p>
+                    <p class="choice text-gray">
+                        <input type="checkbox" id="test"/>
+                        我已阅读并同意《造作物流及售后协议》
+                    </p>
+                    <a href="" id="jumpPage">了解更多售后和服务详情<i class="glyphicon glyphicon-menu-right" aria-hidden="true" style="color: white"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mid-3">
+                <div class="col-md-10 col-md-offset-1 col-xs-12">
+                    <div class="mid-3-text">
+                        <br>
+                        <h3>您是否需要发票？</h3>
+                        <div class="mid-3-text1">
+                            <input type="checkbox" id="test1"/>
+                            <p id="test2">我要开发票<i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></p>
+                        </div>
+                        <h3>如果还有别的需要，不妨备注一句</h3>
+                        <br>
+                        <textarea name="" id="Beizhu" cols="" rows="" placeholder="在此处添加备注"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mid-4">
+                <span id="price"></span>
+                <span class="text-gray" id="discounts"></span>
+                <span id="myspan">•</span>
+                <span class="text-gray" id="mydiscounts">使用¥0优惠券</span>
+                <span id="wrap">使用其它优惠券<i class="glyphicon glyphicon-menu-right" aria-hidden="true" style="color:#5bb688"></i></span>
+                <button href="" id="payJump">结算<i class="glyphicon glyphicon-menu-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="container wrapBox">
+        <div class="row" id="rowHtml"></div>
+
+        <div class="row" style="position: relative">
+            <div class="modeBtn quxiao">取消</div>
+            <div class="modeBtn queding">确定</div>
+        </div>
+
+
+    </div>
+</section>
+
+@@include("footer.html")
+
+<script src="../js/jquery-3.2.1.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../js/person/Payconfirm.js"></script>
+<script src="../js/nav/nav1.js"></script>
+</body>
+</html>

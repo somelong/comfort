@@ -1,0 +1,28 @@
+.userImg{
+    /*outline: 1px solid red;*/
+    float: right;
+
+}
+.userImg{
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+}
+.showImg img{
+    width: 250px;
+    float: left;
+    margin-left: 10px;
+}
+.userPingLunArea{
+}
+.userName{
+    font-size: 20px;
+    font-weight: 500;
+}
+.userName~p{
+    color: #8e8e8e;
+    font-size: 15px;
+}
+.comfortResponse{
+    color: #ff7a7f;
+}

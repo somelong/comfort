@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #3e3e3e;
+}
+#close{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    /*background:black;*/
+    cursor: pointer;
+    font-size: 40px;
+}
+#modal-lg{
+    background-color: #f6f6f6;
+    border-radius: 50px;
+}
+#neirong{
+    color: #a0a0a0;
+}
+
+.form-box>select, .form-box>input[type=text] {
+    width: 250px;
+    height: 42px;
+    margin-top: 10px;
+    padding: 0 10px;
+    margin-left: 20px;
+    line-height: 42px;
+    border: #d2d2d2 1px solid;
+    color: #a0a0a0;
+    font-size: 14px;
+    /*-webkit-appearance: none;*/
+}
+#address_text{
+    width: 800px;
+    margin-top: 20px;
+}
+.DataText>img{
+    width: 30px;
+    display: inline-block;
+}
+.DataText>p{
+    display: inline-block;
+}
+.DataText{
+    border-right: 1px solid #eaeaea;
+}
+.ImgBox{
+    width: 42px;
+    height: 42px;
+    background-color: #a1a1a1;
+    display: inline-block;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.ImgBox:hover{
+    background-color: #32b16c;
+}
+.btn-success{
+    background-color: #32b16c;
+    border-color: #32b16c;
+}
+.halfR{
+    position: relative;
+    height: 126px;
+}
+.halfR>span{
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    cursor: pointer;
+}
+.smPic{
+    width: 100%;
+    height: 50px;
+    /*border: 1px solid;*/
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+}
+.smPic span:nth-of-type(1){
+    display: inline-block;
+    height: 42px;
+    width: 30px;
+    text-align: center;
+    line-height: 42px;
+    color: #cacaca;
+}
+.smPic span:nth-of-type(2){
+    display: inline-block;
+    height: 42px;
+    width: 30px;
+    text-align: center;
+    line-height: 42px;
+    color: #cacaca;
+}
+.smPic span:nth-of-type(3){
+    position: absolute;
+    bottom: 10%;
+    left: 55%;
+    display: inline-block;
+    color:#32b16c;
+    cursor: pointer;
+}
+.mid2{
+    position: relative;
+    height: 200px;
+    border-right: 1px solid #eaeaea;
+}
+.mid2>a{
+    display: inline-block;
+    text-decoration: none;
+    color:#3e3e3e;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    width: 35%;
+    height: 40px;
+    border: 2px solid #3e3e3e;
+    border-radius: 50px;
+    transition: all .2s linear;
+}
+.mid2>a:hover{
+    background-color: #3e3e3e;
+    color: white;
+}
+.mid2>a:hover .jia{
+    color: white;
+}
+.moBox{
+    display:inline-block;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background-color: #3e3e3e;
+    color:white;
+    border-radius: 50px;
+    margin-left: 3%;
+}
+.jia1{
+    width: 50px !important;
+    height: 26px !important;
+    text-align: center !important;
+    color:white !important;
+    border-radius: 50px !important;
+    line-height: 10px !important;
+    margin-left: 20px !important;
+}
+.btn-warning{
+    width: 160px;
+    height: 40px;
+    background-color:#32b16c;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+}
+.btn-warning:hover{
+    background-color: #329a54;
+    border: none;
+}
+.btn-warning.focus, .btn-warning:focus{
+    background-color: #329a54;
+    border: none;
+}
+.headImg{
+    width: 126px;
+    cursor: pointer;
+    display: inline-block;
+}
+.headText{
+    display: inline-block;
+    width: 126px;
+    height: 126px;
+    /*border: 1px solid;*/
+    position: relative;
+}
+.picText{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #9f9f9f;
+    position: absolute;
+    left: 75%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -25px;
+    cursor: pointer;
+}
+#username{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #9f9f9f;
+    width: 250px;
+    height: 46px;
+    line-height: 46px;
+    text-indent: 16px;
+}
+.userBox{
+    width: 500px;
+    height: 52px;
+    border: 1px solid #eaeaea;
+    border-left:1px dashed #eaeaea;
+    border-top-right-radius:50px ;
+    border-bottom-right-radius:50px ;
+}
+label{
+    line-height: 50px;
+    color: #9f9f9f;
+    font-size: 14px;
+    margin-left: 20px
+}
+.userBox>input{
+    display: inline-block;
+    height: 50px;
+    width: 400px;
+    line-height: 50px;
+    font-size: 14px;
+    border: none;
+    padding-left: 10px;
+}
+.sexBox{
+    width: 500px;
+    height: 50px;
+    border: 1px solid #eaeaea;
+    border-left:1px dashed #eaeaea;
+    border-top-right-radius:50px ;
+    border-bottom-right-radius:50px ;
+}
+.sexBox>select{
+    display: inline-block;
+    height: 47px;
+    width: 400px;
+    line-height: 50px;
+    font-size: 14px;
+    border: none;
+    padding-left: 10px;
+}
+.birthBox{
+    width: 500px;
+    height: 50px;
+    border: 1px solid #eaeaea;
+    border-left:1px dashed #eaeaea;
+    border-top-right-radius:50px ;
+    border-bottom-right-radius:50px ;
+}
+.birthBox>input{
+    display: inline-block;
+    height: 46px;
+    width: 400px;
+    line-height: 50px;
+    font-size: 14px;
+    border: none;
+    padding-left: 10px;
+}
+#confirm{
+    display: inline-block;
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    background-color: #32b16c;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    margin-left: 5%;
+}
+#confirm:hover{
+    background-color:#329a54;
+}
+.revision{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    /*border: 1px solid;*/
+    text-align: center;
+    line-height: 40px;
+    color:#9f9f9f;
+    cursor: pointer;
+}
+section{
+    overflow: hidden;
+}
+.bigBox{
+    position: relative;
+    /*overflow: hidden;*/
+}
+.smBox1{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+.smBox2{
+    width: 100%;
+     position: absolute;
+     top: 0;
+     left: 100%;
+     opacity: 1;
+ }
+.box1{
+    box-shadow: 2px 2px 2px 2px #f6f6f6;
+    background-color: #fafafa;
+}
+canvas{
+    border: 1px solid #eaeaea;
+}
+#cutBox{
+    width: 126px;
+    height: 126px;
+    border: 2px solid red;
+    position: absolute;
+    border-radius: 126px;
+    top:50px;
+    left: 50px;
+    cursor: grab;
+    cursor: -webkit-grab;
+}
+#newCanvas{
+    border-radius: 126px;
+}
+#imgBox{
+    opacity: 0;
+}
+#myimgLogo{
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+}
+#myimgLogo1{
+    width: 126px;
+    height: 126px;
+    border-radius: 126px;
+}

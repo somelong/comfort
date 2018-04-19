@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>晒单评论页</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <!--公共css-->
+    <link rel="stylesheet" href="../css/nav/nav.css">
+    <link rel="stylesheet" href="../css/nav/footer.css">
+    <link rel="stylesheet" href="../css/nav/fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <link rel="stylesheet" href="../css/activeCSS/usershaidan.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .container-fluid{
+            /*padding: 30px 0;*/
+        }
+    </style>
+</head>
+<body>
+
+@@include("header.html")
+
+<section>
+    <div class="container-fluid" style="width: 98%">
+        <div class="row borderBotton " >
+            <div class="col-lg-12 MarginPing" style="margin:0;padding:0">
+                <div class="payInformation">
+                    <span class="payPrice">￥4899</span>
+                    <span class="sumPrice">总价:<span>￥4999</span></span>
+                    <span class="discount">优惠券: <span>￥100</span></span>
+                    <p>单号: <span>787654567876543456</span></p>
+                    <p>收货信息: <span>冯小龙 / 15882428755 / 四川 成都 新都区 新都区天源路三段443号</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="row MarginPing">
+             <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
+                 <div class="productImg">
+                     <img src="../images/sofa_pic/sofa_a9.jpg" alt="" class=" img-responsive img-rounded" >
+                 </div>
+             </div>
+            <div class="col-md-9">
+                    <div class="productDetail">
+                        <div class="productDetail">
+                            <p> <b>comfort贝岛沙发 <sup>TM</sup></b> <span>￥4999</span>x <span>1</span></p>
+                            <p class="productType"> <span>香草紫</span> <span>/</span><span>单人座</span> </p>
+                        </div>
+                        <div class="sentTime">
+                            <span class="glyphicon glyphicon-time productType"></span>
+                            <span>预计</span>
+                            <span>2018-04-15</span>
+                            <span>前发货</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row showBgc">
+              <div class="MarginPing">
+                  <div class="row">
+                      <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12">
+                          <div class="starMargin">
+                              <span class="redStar">*</span>商品评价：
+                              <span class="glyphicon glyphicon-star redStar"></span>
+                              <span class="glyphicon glyphicon-star redStar"></span>
+                              <span class="glyphicon glyphicon-star redStar"></span>
+                              <span class="glyphicon glyphicon-star redStar"></span>
+                              <span class="glyphicon glyphicon-star-empty point"></span>
+                          </div>
+
+                      </div>
+                  </div>
+                  <div class="row ">
+                      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 comentMargin" >
+                          <span class="redStar">*</span>评价内容：
+                      </div>
+                      <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 ">
+                          <textarea name="" id="b" cols="80" rows="6"    style="resize:none;" placeholder="请给购买的人亲们留下你宝贵的评语！"></textarea>
+                          <div><span id="a">已输入:0/200 字符</span></div>
+                      </div>
+                      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+                          <div class="labelBtn">
+                              <button class="btn btn-default">外观美观</button>
+                              <button class="btn btn-default">性价比高</button>
+                              <button class="btn btn-default">结实耐用</button>
+                              <button class="btn btn-default">小巧方面</button>
+                              <button class="btn btn-default">操作简单</button>
+                              <button class="btn btn-default">趣味性强</button>
+                              <button class="btn">+添加标签</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-xs-1 text-right">
+                          <div class="onloadImg"> <span class="redStar">*</span>上传图片：</div>
+                      </div>
+                      <div class="col-xs-5 comentMargin">
+                          <div id="upload"></div>
+                      </div>
+                      <div class="col-xs-2 comentMargin">
+                          <button class="submit addSubmit">submit</button>
+                      </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+</section>
+
+@@include("footer.html")
+
+<script src="../js/jquery-3.2.1.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="../js/nav/nav1.js"></script>
+<script src="../js/activeJS/tinyImgUpload.js"></script>
+<script>
+    //上传照片的js
+    document.documentElement.style.fontSize = document.documentElement.clientWidth*0.1+'px';
+    var options = {
+        path: '/',
+        onSuccess: function (res) {
+            console.log(res);
+        },
+        onFailure: function (res) {
+            console.log(res);
+        }
+    };
+    var upload = tinyImgUpload('#upload', options);  //调用上传的方法
+    document.getElementsByClassName('submit')[0].onclick = function (e) {
+        upload();
+    };
+
+//限制输入的字数
+    $("#b").on("input propertychange", function() {
+        var $this = $(this),
+            _val = $this.val(),
+            count = "";
+        if (_val.length > 200) {
+            $this.val(_val.substring(0, 200));
+        }
+        count = 200 - $this.val().length;
+        $("#a").text(`已输入:${count}/200 字符`);
+    });
+
+</script>
+</body>
+</html>

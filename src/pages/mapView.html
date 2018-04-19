@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>comfort家居-实体店</title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="../css/nav/nav.css">
+    <link rel="stylesheet" href="../css/nav/footer.css">
+    <link rel="stylesheet" href="../css/nav/fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <link rel="stylesheet" href="../css/nav/mapView.css">
+    <script src="http://webapi.amap.com/maps?v=1.4.5&key=b1eca739fb5ff63625d011bc209f9433"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+</head>
+<body>
+
+@@include("header.html")
+
+<div class="main">
+    <div class="mapleftNav">
+        <div>
+            <div class="maplogoDiv">
+                <img src="../images/logoB.png" alt="">
+            </div>
+            <div class="mapinputDiv">
+                <input id="cityName" type="text" placeholder="请输入您所在的城市">
+                <button id="query">搜索</button>
+            </div>
+        </div>
+        <ul id="dingweiUl1" class="dingweiUl">
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>成都荟聚店 | 荟聚中心3层73号</p>
+                    <p>在成都遇见您，欢迎你来荟聚与世界设计相聚</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>成都万象城店 | 万象城LG层113</p>
+                    <p>1000+设计落地，20+实景搭配，给您理想生活</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>成都快闪概念店 | 银泰广场</p>
+                    <p>首家快闪店开幕，上千个气球温暖冬日银泰广场</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>成都快闪概念店 | 万达广场</p>
+                    <p>快闪店开幕，上千个气球温暖冬日万达广场</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>成都快闪概念店 | 时代广场</p>
+                    <p>快闪店开幕，上千个气球温暖冬日时代广场</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>成都快闪概念店 | 滑稽广场</p>
+                    <p>快闪店开幕，上千个气球温暖冬日滑稽广场</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>成都快闪概念店 | 九龙广场</p>
+                    <p>快闪店开幕，上千个气球温暖冬日九龙广场</p>
+                </div>
+            </li>
+        </ul>
+
+        <ul id="dingweiUl2" class="dingweiUl">
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>北京首店 | 颐堤港LG层21号</p>
+                    <p>朝阳区酒仙桥路18号，设计顶尖圣地, 一定要去...</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>北京万象城店 | 万象城LG层113</p>
+                    <p>百年经典，融入现代生活</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>北京快闪概念店 | 王府井</p>
+                    <p>开幕活动，来看北京如何为新店疯狂打call</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>北京旗舰店丨北京万象天地L2层</p>
+                    <p>1000+平米华丽全情景陈列，最精致的生活</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>北京荟聚店 | 荟聚中心3层73号</p>
+                    <p>在北京遇见，欢迎你来荟聚与世界设计相聚</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>北京荟聚店 | 荟聚中心3层73号</p>
+                    <p>在北京遇见，欢迎你来荟聚与世界设计相聚</p>
+                </div>
+            </li>
+
+            <li class="dingweiLi">
+                <div class="dingweiDiv">
+                    <img src="../images/dingwei.png" alt="">
+                </div>
+                <div class="dingweiTextDiv">
+                    <p>北京荟聚店 | 荟聚中心3层73号</p>
+                    <p>在北京遇见，欢迎你来荟聚与世界设计相聚</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div style="left: 22%; top: 45px;" id="container"></div>
+</div>
+
+<div id="tip" style="top: 45px;">您现在所处的城市是：<br><span id="info">城市：成都市</span></div>
+
+@@include("footer.html")
+
+<script src="../js/jquery-3.2.1.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script>
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        zoom: 12  // 控制地图显示倍数
+    });
+
+    map.on('moveend', getCity);
+    function getCity() {
+        map.getCity(function(data) {
+            if (data['province'] && typeof data['province'] === 'string') {
+                document.getElementById('info').innerHTML = '城市：' + (data['city'] || data['province']);
+            }
+        });
+    }
+
+    var markers = [{
+        icon: '../images/dingwei.png',
+        position: [104.060242,30.550117],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [104.009527,30.591557],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [104.027036,30.646437],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [104.106344,30.631742],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [103.956998,30.733754],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [104.04815,30.670729],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [104.089349,30.699073],
+    }
+    // 北京的店
+    , {
+        icon: '../images/dingwei.png',
+        position: [116.274136,39.855014],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [116.256626,39.941407],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [116.339024,39.979301],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [116.407002,39.937458],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [116.472233,39.96404],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [116.46571,39.890058],
+    }, {
+        icon: '../images/dingwei.png',
+        position: [116.446484,39.823644],
+    }
+    ];
+    // 添加一些分布不均的点到地图上,地图上添加三个点标记，作为参照
+    markers.forEach(function(marker) {
+        new AMap.Marker({
+            map: map,
+            icon: marker.icon,
+            position: [marker.position[0], marker.position[1]],
+            offset: new AMap.Pixel(-12, -36),
+        });
+    });
+
+
+
+    // 添加事件监听, 使地图自适应显示到合适的范围
+    // AMap.event.addDomListener(document.getElementById('setFitView'), 'click', function() {
+    //     var newCenter = map.setFitView();
+    //     document.getElementById('centerCoord').innerHTML = '当前中心点坐标：' + newCenter.getCenter();
+    //     document.getElementById('tips').innerHTML = '通过setFitView，地图自适应显示到合适的范围内,点标记已全部显示在视野中！';
+    // });
+    var dingwei = true;
+    AMap.event.addDomListener(document.getElementById('query'), 'click', function() {
+        var cityName = document.getElementById('cityName').value;
+        dingwei = !dingwei;
+        if(!dingwei){
+            $("#dingweiUl2").css("display","block");
+            $("#dingweiUl1").css("display","none");
+        }else {
+            $("#dingweiUl2").css("display","none");
+            $("#dingweiUl1").css("display","block");
+        }
+        if (!cityName) {
+            cityName = '成都市';
+        }
+        map.setCity(cityName);
+    });
+
+
+    // $(".headerNav").css("z-index","200");
+</script>
+<script src="../js/nav/nav1.js"></script>
+</body>
+</html>

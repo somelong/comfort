@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情页</title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/harp.css">
+
+    <link rel="stylesheet" href="../css/nav/nav.css">
+    <link rel="stylesheet" href="../css/nav/footer.css">
+    <link rel="stylesheet" href="../css/nav/fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!--头部-->
+<!--加载动画的div-->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!--右侧固定的滑动条-->
+<div class="leftMainNav">
+    <a href="code.html">
+        <div class="member">
+            <img src="../images/nav/leftNav_43.png" alt="">
+            <p>会员礼</p>
+        </div>
+    </a>
+    <a href="ShopCar.html">
+        <div class="shopCar">
+            <img src="../images/nav/shopCar.png" alt="">
+            <p>购物车</p>
+        </div>
+    </a>
+    <a href="#">
+        <div class="service">
+            <img src="../images/nav/leftNav_31.png" alt="">
+            <p>客服</p>
+        </div>
+    </a>
+    <a href="" id="mya">
+        <div class="service">
+            <span class="glyphicon glyphicon-heart-empty" id="myxin" style="font-size: 25px"></span>
+            <!--<img src="" alt="" class="glyphicon glyphicon-heart-empty" id="myxin">-->
+            <p>收藏</p>
+        </div>
+    </a>
+    <a href="#">
+        <div class="backTop">
+            <img src="../images/nav/leftNav_33.png" alt="">
+            <p>回到顶部</p>
+        </div>
+    </a>
+</div>
+<!--页面购物车-->
+<div class="shopCarDiv">
+    <div>
+        <h3>购物车</h3>
+        <p>最新加入的商品</p>
+    </div>
+    <div class="shopCarDivCommodity commodity1">
+        <div class="shopCarDivCommodityImg">
+            <img src="../images/sofa_pic/sofa_a8.jpg" alt="">
+        </div>
+        <div class="shopCarDivCommodityText">
+            <p>传说中的商品名字</p>
+            <p>￥666.00</p>
+        </div>
+        <div class="shopCarDivCommodityIc">
+            <img src= "../images/nav/clos.png" alt="">
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--导航条-->
+<header class="header">
+    <div class="container-fluid headerTop">
+        <div class="row toprow">
+            <ul class="TopUl">
+                <li><a href="/activityphps.do"><i class="glyphicon glyphicon-map-marker"></i> 实体店</a></li>
+                <li><a href="AfterSales/UnderstandingZaoZuo.html">了解Comfort</a></li>
+                <li><a href="BusinessCooperation.html">商业合作</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid headerNav">
+        <div class="row">
+            <ul class="leftNav">
+                <li><img class="leftNavlogo" src="../images/nav/logoW.png" alt=""></li>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="dingzhi.html">一键装家</a></li>
+                <li>
+                    <a href="sofa.html">沙发</a>
+                    <ul class="submenu sofa">
+                        <li>
+                            <a href="sofa.html">
+                                <img src="../images/nav/quanbu2.jpg" alt="">
+                                <p>全部</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sofa.html">
+                                <img src="../images/nav/u2.jpg" alt="">
+                                <p>四人沙发</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sofa.html">
+                                <img src="../images/nav/z2.jpg" alt="">
+                                <p>三人沙发</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sofa.html">
+                                <img src="../images/nav/t2.jpg" alt="">
+                                <p>双人沙发</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sofa.html">
+                                <img src="../images/nav/x2.jpg" alt="">
+                                <p>单人沙发</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sofa.html">
+                                <img src="../images/nav/e2.jpg" alt="">
+                                <p>沙发墩</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">桌几</a>
+                    <ul class="submenu Stool">
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/quanbu2.jpg" alt="">
+                                <p>全部</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/v2.jpg" alt="">
+                                <p>书桌·餐桌</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/aa2.jpg" alt="">
+                                <p>茶几</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/n2.jpg" alt="">
+                                <p>边几</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">板凳</a>
+                    <ul class="submenu wooden">
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/quanbu2.jpg" alt="">
+                                <p>全部</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/ww2.jpg" alt="">
+                                <p>座椅</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/d2.jpg" alt="">
+                                <p>坐墩</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/f2.jpg" alt="">
+                                <p>凳子</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">柜架</a>
+                    <ul class="submenu tankBracket">
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/quanbu2.jpg" alt="">
+                                <p>全部</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/hh2.jpg" alt="">
+                                <p>置物架</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/g2.jpg" alt="">
+                                <p>书柜·书架</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/oo2.jpg" alt="">
+                                <p>电视柜</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/h2.jpg" alt="">
+                                <p>置物架</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/ff2.jpg" alt="">
+                                <p>衣柜</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/oo2.jpg" alt="">
+                                <p>电视柜</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/o2.jpg" alt="">
+                                <p>单元格</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/tt2.jpg" alt="">
+                                <p>床头柜</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/dd2.jpg" alt="">
+                                <p>衣帽架</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/i2.jpg" alt="">
+                                <p>鞋柜·玄关</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">灯具</a>
+                    <ul class="submenu light">
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/quanbu2.jpg" alt="">
+                                <p>全部</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/zz2.jpg" alt="">
+                                <p>台灯</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/uu2.jpg" alt="">
+                                <p>地灯</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/r2.jpg" alt="">
+                                <p>吊灯</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/w2.jpg" alt="">
+                                <p>夜灯</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">床·床品</a>
+                    <ul class="submenu bed">
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/quanbu2.jpg" alt="">
+                                <p>全部</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/jj2.jpg" alt="">
+                                <p>床</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/gg2.jpg" alt="">
+                                <p>床垫</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/tt2.jpg" alt="">
+                                <p>床头柜</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/rr2.jpg" alt="">
+                                <p>床品四件套</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/b2.jpg" alt="">
+                                <p>被芯</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/ee2.jpg" alt="">
+                                <p>枕芯</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/pp2.jpg" alt="">
+                                <p>床褥</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/p2.jpg" alt="">
+                                <p>床下储蓄盒</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/k2.jpg" alt="">
+                                <p>床尾凳</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">家纺</a>
+                    <ul class="submenu homeTextiles">
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/quanbu2.jpg" alt="">
+                                <p>全部</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/c2.jpg" alt="">
+                                <p>地毯</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/y2.jpg" alt="">
+                                <p>盖毯</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/rr2.jpg" alt="">
+                                <p>床品四件套</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/j2.jpg" alt="">
+                                <p>抱枕</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/m2.jpg" alt="">
+                                <p>毛巾</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">装饰</a>
+                    <ul class="submenu decorate">
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/quanbu2.jpg" alt="">
+                                <p>全部</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/xx2.jpg" alt="">
+                                <p>摆件·花瓶</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/yy2.jpg" alt="">
+                                <p>收纳</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/qq2.jpg" alt="">
+                                <p>装饰画</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">餐具</a>
+                    <ul class="submenu tableware">
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/quanbu2.jpg" alt="">
+                                <p>全部</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/s2.jpg" alt="">
+                                <p>套装</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/a2.jpg" alt="">
+                                <p>碗盘</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/ii2.jpg" alt="">
+                                <p>杯子</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/q2.jpg" alt="">
+                                <p>储物</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/nav/l2.jpg" alt="">
+                                <p>托盘</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="rightNav">
+                <li><a href="/activityphps.do"><i class="glyphicon glyphicon-map-marker"></i> 实体店</a></li>
+                <li><a href="AfterSales/UnderstandingZaoZuo.html">了解Comfort</a></li>
+                <li><a href="BusinessCooperation.html">商业合作</a></li>
+                <li><a href="Person-Member1.html"><img src="../images/nav/usersW.png" alt=""></a></li>
+                <li><a href="ShopCar.html"><img src="../images/nav/show.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row" id="firstRow">
+        <div class="col-xs-7 col-lg-7">
+            <img src="../<%=tdd_pic%>" class="img-responsive changef">
+        </div>
+        <div class="col-xs-5" id="dingdan">
+            <p class="fs_26"><%=c_name%>丨<%=e_name%></p>
+            <p class="fs_26 pink">￥<span class="fw_700 xxprice"><%=l_price%></span></p>
+            <p class="grayBg">今天下单，将于2018-01-20前发货，大件家具会致电确认</p>
+            <div class="errRed">
+                <p class="errRedText">请选择商品信息</p>
+                <div class="row">
+                    <div class="col-xs-2 pad_top">
+                        <span class="inBlock letterSpa wid_6 color_gray">颜色</span>
+                    </div>
+                    <div class="col-xs-10 pad_lef">
+                        <%for(var i=0;i<colorImgData.length;i++){%>
+                        <span class="inBlock outpad color_gray changeC">
+                                <%=colorImgData[i].color%>
+                        </span>
+                        <%}%>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 pad_top">
+                        <span class="inBlock letterSpa wid_6 color_gray">款型</span>
+                    </div>
+                    <div class="col-xs-10 pad_lef">
+                        <%for(var i=0;i<styleData.length;i++){%>
+                        <span class="inBlock outpad color_gray changeS"><%=styleData[i].style%></span>
+                        <%}%>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <input type="text" value="1" class="num" id="num2">
+                <button class="px441">立即购买</button>
+                <button class="px442">加入购物车</button>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="designer">
+        <img src="../<%=designer%>" class="img-responsive">
+    </div>
+    <div class="row" id="a_row">
+        <img src="../<%=aRow%>" class="img-responsive">
+    </div>
+    <div class="row" id="b_row">
+        <%for(var i=0;i<bRowData.length;i++){%>
+        <span class="inBlock bb_row">
+            <img src="../<%=bRowData[i].pic_src%>" class="img-responsive">
+        </span>
+        <%}%>
+    </div>
+<!--循环-->
+    <%for(var i=0;i<show_x.length;i++){%>
+        <%if(show_x[i].pic_src.search("_r")==-1&&show_x[i].pic_src.search("_l")==-1){%>
+            <div class="row margin_b_20">
+                <img src="../<%=show_x[i].pic_src%>" class="img-responsive">
+            </div>
+        <%}else if(show_x[i].pic_src.search("_l")!=-1){%>
+            <div class="row margin_b_20">
+                <div class="col-xs-6 deletePadding margin_r">
+                    <img src="../<%=show_x[i].pic_src%>" class="img-responsive">
+                </div>
+                <div class="col-xs-6 deletePadding margin_l">
+                    <img src="../<%=show_x[i+1].pic_src%>" class="img-responsive">
+                </div>
+            </div>
+        <%}%>
+    <%}%>
+    <%for(var i=0;i<scene_y.length;i++){%>
+        <div class="row margin_b_20">
+            <img src="../<%=scene_y[i].pic_src%>" class="img-responsive">
+        </div>
+    <%}%>
+    <div class="row" id="wulalababa">
+        <img src="./images/colorImg/zhiliang.jpg" class="img-responsive">
+        <div id="wulala">
+            <p>严苛质量保证</p>
+            <button>查看详情</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="footImg">
+            <img src="../images/person-member/shopcar2.jpg" class="img-responsive" alt="">
+            <h2>服务承诺</h2>
+            <div class="footImg-s">
+                <div class="footImg-sm">
+                    <a href="" id="A1">
+                        <img src="../images/person-member/icon-3.png" style="width: 60px;" alt="">
+                        <p class="text-white">全国包邮/166城</p>
+                        <h4 class="text-white">免费送装</h4>
+                    </a>
+                    <a href="" id="A2">
+                        <img src="../images/person-member/icon-4.png" style="width: 60px" alt="">
+                        <p class="text-white">延期高利补偿/确保</p>
+                        <h4 class="text-white">准时交付</h4>
+                    </a>
+                    <a href="" id="A3">
+                        <img src="../images/person-member/icon-5.png" style="width: 60px" alt="">
+                        <p class="text-white">价格保障/变动返差价</p>
+                        <h4 class="text-white">7日保价</h4>
+                    </a>
+                    <a href="" id="A4">
+                        <img src="../images/person-member/icon-6.png" style="width: 60px" alt="">
+                        <p class="text-white">三年质保</p>
+                        <h4 class="text-white">7日退换</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--尾部-->
+<%-include("common/footer.ejs")%>
+
+<script src="../js/jquery-3.2.1.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../js/harp.js"></script>
+<script src="../js/nav/nav1.js"></script>
+<script>
+    var uid = sessionStorage.getItem("u_id");
+
+    let number1112;
+    $("#mya").click(function (e) {
+        e.preventDefault()
+       $("#myxin").css("color","red")
+        $.ajax({
+            type:"post",
+            url:"/harp1.do",
+            async:false,
+            data:{
+                img:$(".changef")[0].getAttribute("src")
+            },
+            success:function (data) {
+                number1112=data[0].p_id
+            },
+        });
+        console.log(number1112)
+        $.ajax({
+            type:"post",
+            url:"/lcgoodxxxx1.do",
+            async:false,
+            data:{
+                number1112:number1112,
+                uid:uid
+            },
+            success:function (data) {
+              console.log(data)
+            },
+        });
+    })
+    // console.log(uid)
+</script>
+</body>
+</html>
